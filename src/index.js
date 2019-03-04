@@ -8,7 +8,6 @@ import { Provider } from 'react-redux'
 import rootReducer from './reducers'
 import * as actionTypes from './constants/actionTypes'
 
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(rootReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
