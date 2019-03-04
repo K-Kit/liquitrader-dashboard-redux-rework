@@ -14,10 +14,10 @@ const initialState = {
 };
 
 const getDefaultStrategy = strategyType => {
-    if (strategyType == 'dca'){
-        return {conditions: []}
+    if (strategyType === 'dca'){
+        return {conditions: [], dca_strategies: {}}
     }
-    else if (strategyType == 'buy'){
+    else if (strategyType === 'buy'){
         return {conditions: []}
     }
     else {
@@ -36,8 +36,6 @@ const getDefaultStrategy = strategyType => {
 * }
 * */
 export default function strategies(state = initialState, action) {
-    // might need to set this to a copy of the object to keep the func pure
-
     let targetStrategies = state[action.strategyType] !== undefined ? state[action.strategyType].slice(): state[action.strategyType];
     switch (action.type) {
         case ADD_STRATEGY:
