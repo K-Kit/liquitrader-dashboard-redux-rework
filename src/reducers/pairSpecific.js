@@ -1,4 +1,4 @@
-import { map, set, value } from 'redux-data-structures';
+import { map } from 'redux-data-structures';
 
 const pairSettings = map({
     addActionTypes: ['ADD_PAIR_SETTING'],

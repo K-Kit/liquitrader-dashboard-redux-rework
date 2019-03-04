@@ -2,47 +2,47 @@ const generalSettings =   {
     byId: {
         exchange: {
             id: 'exchange',
-            text: 'binance'
+            value: 'binance'
         },
         paper_trading: {
             id: 'paper_trading',
-            text: true
+            value: true
         },
         starting_balance: {
             id: 'starting_balance',
-            text: 3
+            value: 3
         },
         market: {
             id: 'market',
-            text: 'ETH'
+            value: 'ETH'
         },
         timezone: {
             id: 'timezone',
-            text: 'US/Pacific'
+            value: 'US/Pacific'
         },
         start_delay: {
             id: 'start_delay',
-            text: 0
+            value: 0
         },
         host: {
             id: 'host',
-            text: 'localhost'
+            value: 'localhost'
         },
         port: {
             id: 'port',
-            text: '7007'
+            value: '7007'
         },
         use_ssl: {
             id: 'use_ssl',
-            text: false
+            value: false
         },
         sell_only_mode: {
             id: 'sell_only_mode',
-            text: false
+            value: false
         },
         trading_enabled: {
             id: 'trading_enabled',
-            text: true
+            value: true
         }
     },
     allIds: [

@@ -25,6 +25,16 @@ const getDefaultStrategy = strategyType => {
     }
 }
 
+/*
+* strategies is a dict of 3 lists, one for each "strategy type" (buy, sell, or dca)
+* each strategy is an object with 3-4 text fields and a list of condition objects
+* condition objects are something like:
+* {
+*   left: indicator,
+*   op: operation,
+*   right: indicator/number/price
+* }
+* */
 export default function strategies(state = initialState, action) {
     let targetStrategies = state[action.strategyType];
     switch (action.type) {
