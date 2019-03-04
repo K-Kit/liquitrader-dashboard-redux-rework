@@ -36,7 +36,9 @@ const getDefaultStrategy = strategyType => {
 * }
 * */
 export default function strategies(state = initialState, action) {
-    let targetStrategies = state[action.strategyType];
+    // might need to set this to a copy of the object to keep the func pure
+
+    let targetStrategies = state[action.strategyType] !== undefined ? state[action.strategyType].slice(): state[action.strategyType];
     switch (action.type) {
         case ADD_STRATEGY:
             targetStrategies = [...targetStrategies, getDefaultStrategy(action.strategyType)];
